@@ -1,0 +1,16 @@
+{
+  "name": "mock-db",
+  "version": "1.0.0",
+  "description": "A mock, in memory, database for stubbing.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattvagni/stub-db.git"
+  },
+  "devDependencies": {
+    "jest": "^15.1.1"
+  }
+}
