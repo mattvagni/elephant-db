@@ -1,5 +1,7 @@
 
 # ElephantDB 🐘
+[![CircleCI](https://circleci.com/gh/mattvagni/elephant-db.svg?style=svg)](https://circleci.com/gh/mattvagni/elephant-db)
+
 ElephantDB is a is a super simple in-memory node database. It supports adding, deleting, updating & querying. It is synchronous & is designed to be used when prototyping or stubbing APIs etc.
 ```bash
 npm install --save elephant-db
