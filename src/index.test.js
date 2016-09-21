@@ -1,5 +1,3 @@
-'use strict';
-
 const ElephantDB = require('./index');
 const _ = require('lodash');
 

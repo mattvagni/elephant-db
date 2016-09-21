@@ -1,5 +1,3 @@
-'use strict';
-
 const _isPlainObject = require('lodash/isPlainObject');
 const _isFunction = require('lodash/isFunction');
 const _isEqual = require('lodash/isEqual');
