@@ -1,16 +1,20 @@
 {
-  "name": "mock-db",
-  "version": "1.0.0",
-  "description": "A mock, in memory, database for stubbing.",
+  "name": "elephant-db",
+  "version": "0.0.1",
+  "description": "A simple in-memory node database.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "eslint . && jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mattvagni/stub-db.git"
   },
   "devDependencies": {
+    "eslint": "^3.5.0",
     "jest": "^15.1.1"
+  },
+  "dependencies": {
+    "lodash": "^4.15.0"
   }
 }
