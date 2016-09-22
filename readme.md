@@ -8,7 +8,8 @@ npm install --save elephant-db
 ```
 
 ## Basic Example
-This is a basic example which creates a db, adds some items & retrieves them.
+This is a basic example which creates a db, adds some items & retrieves them. Any returned items are copies and can be safely mutated without effecting the actual items stored in the db.
+
 ```js
 const ElephantDB = require('elephant-db');
 
