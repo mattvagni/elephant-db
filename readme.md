@@ -54,7 +54,7 @@ db.select('dogs').findAll((dog) => dog.age < 5);
 ```
 
 ## Full API
-For examples check the tests.
+For examples of each method, check the tests.
 
 #####`ElephantDB([String])`
 Constructor to create an instance of ElephantDB. It takes a single array of string where each string is the name of a collection.
@@ -63,13 +63,19 @@ Constructor to create an instance of ElephantDB. It takes a single array of stri
 Selects a single collection within which you would like to find, delete, update etc.
 
 #####`.find({}|fn)`
-Finds & returns the first document that matches. Takes either an object or function to find you a document. You can use an object that defines your query (e.g. `.find({name: 'John'})` to find the first document with the name of John). Alternatively you can use a function that returns true or false base on whether a document matches (e.g. `.find((person) => person.age <= 30)`)
+Finds & returns the first document that matches. Takes either an object or function to find you a document. You can use an object that defines your query (e.g. `.find({name: 'John'})` to find the first document with the name of John). Alternatively you can use a function that returns true or false base on whether a document matches (e.g. `.find((person) => person.age <= 30)`). Should no documents match your query, it will return undefined like [Array.prototype.find()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
 #####`.findAll({}|fn)`
-Same as `.find()` but returns an array of all documents that match. If called without a query, returns all documents in the selected collection.
+Same as `.find()` but returns an array of all documents that match (or an empty array, if none match). If called without a query, returns all documents in the selected collection.
 
 #####`.update({}|fn, {}|fn)`
-Finds & returns the first document that matches (like `.find()`) and updates that document. For example: `.update({id: 1}, {age: 15})` would find a dog with the id of 1 and set it's age to 15 (in the example above). Alternatively a function can be used to update the document: `.update({id: 1}, (dog) => { dog.age = dog.age*2; })`
+Finds & returns the first document that matches (like `.find()`) and updates that document. For example: `.update({id: 1}, {age: 15})` would find a dog with the id of 1 and set it's age to 15 (in the example above). Alternatively a function can be used to update the document. For example: 
+```js
+db.update({id: 1}, (dog) => { 
+    dog.age = dog.age * 2; 
+})
+```
+
 
 #####`.updateAll({}|fn, {}|fn)`
 Same as `update()` but updates all documents that matches.
