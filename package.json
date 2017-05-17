@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "eslint": "^3.5.0",
-    "jest": "^15.1.1"
+    "jest": "^20.0.3"
   },
   "dependencies": {
     "lodash": "^4.15.0"
